@@ -1,4 +1,9 @@
 {
     "idf.port": "/dev/ttyUSB0",
-    "idf.flashType": "UART"
+    "idf.flashType": "UART",
+    "idf.adapterTargetName": "esp32",
+    "files.associations": {
+        "esp_err.h": "c",
+        "task.h": "c"
+    },
 }
