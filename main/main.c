@@ -14,9 +14,9 @@ static void AlienTest(TFT_t * dev, int width, int height, int key)
     int fg = BLACK;
     for (int x = 0; x < width; x++)
     {
-        bg = rgb565_conv((31 - x / 5) << 3, (x / 3) << 2, 0);
         for (int y = 0; y < height; y++)
         {
+            bg = rgb565_conv((31 - x / 5) << 3, (x / 3) << 2, y);
             int16_t color = fg;
             if ((x ^ y) % key) color = bg;
             lcdDrawPixel(dev, x, y, color);
