@@ -10,16 +10,17 @@
 
 static void AlienTest(TFT_t * dev, int width, int height, int key)
 {
+    int bg = BLACK;
     for (int x = 0; x < width; x++)
     {
+        bg = rgb565_conv((31 - x / 5) << 3, (x / 3) << 2, 0);
         for (int y = 0; y < height; y++)
         {
             int16_t color = WHITE;
-            if ((x ^ y) % key) color = BLACK;
+            if ((x ^ y) % key) color = bg;
             lcdDrawPixel(dev, x, y, color);
         }
     }
-    //vTaskDelay(50); //sort of yield
 }
 
 static void ST7789(void *pvParameters)
