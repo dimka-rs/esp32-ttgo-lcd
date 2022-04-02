@@ -8,4 +8,4 @@ Alien art: https://hackaday.com/2021/04/13/alien-art-drawn-with-surprisingly-sim
 
 Board bought here: https://www.aliexpress.com/item/33048962331.html
 
-![pinout](images/ttgo.jpg)
+![photo](images/photo.jpg)
